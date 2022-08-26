@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL here]()
-- Live Site URL: [Live site URL here]()
+- Solution URL: [Solution URL here](https://github.com/JulianLivrone/Four-card-feature-section)
+- Live Site URL: [Live site URL here](https://julianlivrone.github.io/Four-card-feature-section/)
 
 ## My process
 
