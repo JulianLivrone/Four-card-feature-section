@@ -1,0 +1,169 @@
+/* =================
+   Table of Contents
+
+   1. Global Styles: Global styles for my project.
+
+   2. Layout: Styles related with layout, e.g. header, nav, main, section, footer, div, etc.
+
+   3. Typography: Styles related to text, e.g. h1, h2, p, etc.
+
+   4. Assets: Styles related with the assets of the project, e.g. images, svg, etc.
+   ================= */
+
+/* =================
+   1. Global Styles
+   ================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* Primary */
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  /* Neutral */
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  padding: 1em;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* =================
+   2. Layout
+   ================= */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 35rem;
+}
+
+.cards {
+  margin: 2em 0;
+}
+
+.card {
+  padding: 1em;
+  border-radius: 1em;
+  margin: 1.5em;
+  box-shadow: 0 0 10px grey;
+  position: relative;
+}
+
+.card::before {
+  content: '';
+  width: 98%;
+  height: 4px;
+  position: absolute;
+  border-top-width: 0.313rem;
+  border-top-style: solid;
+  border-radius: 5em;
+  top: 0;
+  left: 1%;
+}
+
+.card.card-supervisor::before {
+  border-top-color: var(--cyan);
+}
+
+.card.card-team-builder::before {
+  border-top-color: var(--red);
+}
+
+.card.card-karma::before {
+  border-top-color: var(--orange);
+}
+
+.card.card-calculator::before {
+  border-top-color: var(--blue);
+}
+
+.card-image-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* =================
+   3. Typography
+   ================= */
+.title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--grayish-blue);
+  font-weight: lighter;
+  display: block;
+}
+
+.powered-by {
+  color: var(--very-dark-blue);
+  font-weight: bold;
+  display: block;
+}
+
+.description {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 3em;
+  color: var(--grayish-blue);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  color: var(--very-dark-blue);
+}
+
+.card-description {
+  font-size: 0.8rem;
+  color: var(--grayish-blue);
+  margin-bottom: 2em;
+}
+
+/* =================
+   4. Assets
+   ================= */
+.card-image-container {
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 70rem;
+  }
+
+  .header {
+    max-width: 35rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .cards {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .middle-cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
